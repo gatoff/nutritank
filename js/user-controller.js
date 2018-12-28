@@ -1,3 +1,10 @@
+// Fill in with your values
+const AUTH0_CLIENT_ID = 'eOJ5WLYQLvUaxWR6PLOvGA0WOz8GF67_';
+const AUTH0_DOMAIN = 'nutritank.auth0.com';
+const AUTH0_CALLBACK_URL = window.location.href; // eslint-disable-line
+const PUBLIC_ENDPOINT = 'https://veuu3skq7h.execute-api.us-west-2.amazonaws.com/dev/api/public';
+const PRIVATE_ENDPOINT = 'https://veuu3skq7h.execute-api.us-west-2.amazonaws.com/dev/api/private';
+
 var userController = {
     data: {
         auth0Lock: null,
@@ -8,10 +15,12 @@ var userController = {
         logoutButton: null,
         profileButton: null,
         profileNameLabel: null,
-        profileImage: null
+        profileImage: null,
+        privateLink: null
     },
     init: function (config) {
-        this.uiElements.loginButton = $('#auth0-login');
+        this.uiElements.loginButton = $('.auth0-login');
+        this.uiElements.privateLink = $('.private');
         this.uiElements.logoutButton = $('#auth0-logout');
         this.uiElements.profileButton = $('#user-profile');
         this.uiElements.profileNameLabel = $('#profilename');
@@ -77,6 +86,32 @@ var userController = {
 
         this.uiElements.loginButton.click(function (e) {
             that.data.auth0Lock.show();
+        });
+
+        this.uiElements.privateLink.click(function (e) {
+          console.log(e)
+          var url = that.data.config.apiBaseUrl + '/' + e.a[href];
+          var accessToken = localStorage.getItem('accessToken');
+          var data = {
+              accessToken: accessToken,
+              url: url
+          };
+          fetch(PRIVATE_ENDPOINT, {
+            method: 'POST',
+            body: data,
+            headers: {
+              Authorization: `Bearer ${idToken}`,
+            },
+          })
+            .then(response => response.json())
+            .then((data) => {
+              console.log('Token:', data);
+              document.getElementById('message').textContent = '';
+              document.getElementById('message').textContent = data.message;
+            })
+            .catch((e) => {
+              console.log('error', e);
+            });
         });
 
         this.uiElements.logoutButton.click(function (e) {
