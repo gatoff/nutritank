@@ -1,6 +1,15 @@
 // Fill in with your values
+const AUTH0_CLIENT_ID = 'eOJ5WLYQLvUaxWR6PLOvGA0WOz8GF67_';
+const AUTH0_DOMAIN = 'nutritank.auth0.com';
+const AUTH0_CALLBACK_URL = window.location.href; // eslint-disable-line
 const PUBLIC_ENDPOINT = 'https://veuu3skq7h.execute-api.us-west-2.amazonaws.com/dev/api/public';
 const PRIVATE_ENDPOINT = 'https://veuu3skq7h.execute-api.us-west-2.amazonaws.com/dev/api/private';
+
+var lock = new Auth0Lock('AUTH0_CLIENT_ID', 'AUTH0_DOMAIN', {
+  //code omitted for brevity
+  configurationBaseUrl: 'https://cdn.auth0.com'
+  //code omitted for brevity
+});
 
 var userController = {
     data: {
@@ -35,9 +44,8 @@ var userController = {
                 responseType: 'id_token token'
             }
         };
-        this.data.auth0Lock = new Auth0Lock(config.auth0.clientId, config.auth0.domain, params){
+        this.data.auth0Lock = new Auth0Lock(config.auth0.clientId, config.auth0.domain, params);
           configurationBaseUrl: 'https://cdn.auth0.com'
-        }
 
         // check to see if the user has previously logged in
         var accessToken = localStorage.getItem('accessToken');
