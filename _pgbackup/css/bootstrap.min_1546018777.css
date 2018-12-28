@@ -1346,10 +1346,7 @@ h6,
 
 p {
     margin: 0 0 10px;
-
-    /*font-size: 14px
- */
-    padding-bottom: 10px;
+    font-size: 14px;
 }
 
 .lead {

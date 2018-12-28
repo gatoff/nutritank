@@ -5,6 +5,12 @@ const AUTH0_CALLBACK_URL = window.location.href; // eslint-disable-line
 const PUBLIC_ENDPOINT = 'https://veuu3skq7h.execute-api.us-west-2.amazonaws.com/dev/api/public';
 const PRIVATE_ENDPOINT = 'https://veuu3skq7h.execute-api.us-west-2.amazonaws.com/dev/api/private';
 
+var lock = new Auth0Lock('AUTH0_CLIENT_ID', 'AUTH0_DOMAIN', {
+  //code omitted for brevity
+  configurationBaseUrl: 'https://cdn.auth0.com'
+  //code omitted for brevity
+});
+
 var userController = {
     data: {
         auth0Lock: null,
@@ -25,6 +31,8 @@ var userController = {
         this.uiElements.profileButton = $('#user-profile');
         this.uiElements.profileNameLabel = $('#profilename');
         this.uiElements.profileImage = $('#profilepicture');
+        this.uiElements.toolboxLink = $('a[href="toolbox/"]')
+        this.uiElements.communityLink = $('a[href="community/"]')
 
         this.data.config = config;
         var params = {
@@ -37,6 +45,7 @@ var userController = {
             }
         };
         this.data.auth0Lock = new Auth0Lock(config.auth0.clientId, config.auth0.domain, params);
+          configurationBaseUrl: 'https://cdn.auth0.com'
 
         // check to see if the user has previously logged in
         var accessToken = localStorage.getItem('accessToken');
@@ -88,7 +97,8 @@ var userController = {
             that.data.auth0Lock.show();
         });
 
-        this.uiElements.privateLink.click(function (e) {
+        this.uiElements.toolboxLink.click(function (e) {
+          console.log("responding to toolbox request")
           console.log(e)
           var url = that.data.config.apiBaseUrl + '/' + e.a[href];
           var accessToken = localStorage.getItem('accessToken');

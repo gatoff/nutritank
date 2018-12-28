@@ -85,8 +85,8 @@
 #div_block-430-44 {
     margin-top: 35px;
     margin-left: 0px;
-    padding-right: 76px;
-    padding-left: 84px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 #div_block-184-44 {
@@ -109,7 +109,6 @@
 }
 
 #div_block-193-44 {
-    height: 330px;
 }
 
 #div_block-386-44 {
@@ -186,7 +185,6 @@
 }
 
 #div_block-94-44 {
-    height: 485px;
 }
 
 #div_block-456-44 {
@@ -223,7 +221,6 @@
 }
 
 #div_block-107-44 {
-    height: 485px;
 }
 
 #div_block-452-44 {
@@ -508,7 +505,7 @@
 }
 
 #link_text-168-11 {
-    margin-left: 42px;
+    margin-left: 10px;
     font-size: 14px;
     font-weight: 600;
     margin-top: 2px;
@@ -935,7 +932,8 @@
     padding-bottom: 5px;
     padding-left: 5px;
     padding-right: 5px;
-    margin-left: 38px;
+
+    /* margin-left: 38px */
 }
 
 #widget-163-11 {
