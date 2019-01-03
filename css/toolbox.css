@@ -775,7 +775,7 @@
     background-color: #ffffff;
 }
 
-@media (max-width:1120px){
+@media (max-width:480px){
     #_nav_menu-157-11 .oxy-nav-menu-list {
         display: none;
     }
