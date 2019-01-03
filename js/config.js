@@ -3,5 +3,5 @@ var configConstants = {
         domain: 'nutritank.auth0.com',
         clientId: 'eOJ5WLYQLvUaxWR6PLOvGA0WOz8GF67_'
     },
-    apiBaseUrl: 'https://veuu3skq7h.execute-api.us-west-2.amazonaws.com/dev'
+    apiBaseUrl: 'https://amatfjawjb.execute-api.eu-west-1.amazonaws.com/dev'
 };

@@ -111,6 +111,12 @@
 .btn-success:focus {
 }
 
+.btn-success:active,
+.btn-success.active {
+    background-color: #419641;
+    border-color: #3e8f3e;
+}
+
 .btn-success:disabled,
 .btn-success[disabled] {
     background-color: #419641;
