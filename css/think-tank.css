@@ -367,18 +367,22 @@
 }
 
 #div_block-136-11 {
+    width: 10%;
     justify-content: flex-start;
 }
 
 #div_block-137-11 {
+    width: 40%;
     flex-direction: row;
     display: flex;
     text-align: left;
     margin-left: 0px;
+    padding-left: 50px;
     align-items: center;
 }
 
 #div_block-138-11 {
+    width: 50.00%;
     justify-content: center;
     align-items: flex-end;
     text-align: right;
@@ -1369,7 +1373,7 @@
     background-color: #ffffff;
 }
 
-@media (max-width:0px){
+@media (max-width:1120px){
     #_nav_menu-157-11 .oxy-nav-menu-list {
         display: none;
     }
