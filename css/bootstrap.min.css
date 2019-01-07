@@ -10,6 +10,9 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
+navbar-right
+
+
 body {
     margin: 0;
 }
@@ -3479,7 +3482,6 @@ select[multiple].form-group-lg .form-control {
 
 .btn {
     display: inline-block;
-    padding: 12px 12px 12px 12px;
     margin-bottom: 0;
     font-size: 16px;
     font-weight: 400;
@@ -3488,7 +3490,6 @@ select[multiple].form-group-lg .form-control {
  */
     text-align: center;
     white-space: nowrap;
-    vertical-align: middle;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
     cursor: pointer;
@@ -4964,14 +4965,19 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 }
 
 .navbar-form {
+    align-items: center;
+    align-content: center;
+
     /*padding: 10px 15px
  */
-    margin-top: 8px;
-    margin-right: -15px;
-
+    /*margin-top: 8px
+ */
+    /*margin-right: -15px
+ */
     /*margin-bottom: 8px
  */
-    margin-left: -15px;
+    /*margin-left: -15px
+ */
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
@@ -5052,7 +5058,6 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 @media (min-width:768px) {
     .navbar-form {
         width: auto;
-        padding-top: 10px;
         padding-bottom: 0;
         margin-right: 0;
         margin-left: 0;
@@ -5109,9 +5114,8 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     }
 
     .navbar-right {
-        margin-top: 10px;
-        float: right !important;
-        margin-right: -15px;
+        /*float: right !important
+ */
     }
 
     .navbar-right~.navbar-right {
@@ -7707,7 +7711,11 @@ button.close {
 }
 
 .sign-in {
-    font-weight: 600;
-    color: #404040;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 10px;
+    padding-right: 10px;
+    color: #404040;
 }
