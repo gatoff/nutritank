@@ -803,7 +803,7 @@ ul li {
     text-align: center;
     color: #000000;
     font-size: 90px;
-    margin-bottom: 41px;
+    margin-bottom: 10px;
 }
 
 @media (max-width:768px){
@@ -1484,6 +1484,38 @@ ul li {
 
 #widget-328-149 {
     paramsBase64: auto;
+}
+
+#_social_icons-142-12.oxy-social-icons {
+    flex-direction: row;
+    margin-right: -18px;
+    margin-bottom: -18px;
+}
+
+#_social_icons-142-12.oxy-social-icons a {
+    font-size: 20px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+}
+
+#_social_icons-142-12.oxy-social-icons a:hover {
+}
+
+#_social_icons-142-12.oxy-social-icons a svg {
+    width: 2em;
+    height: 2em;
+    color: #32667d;
+}
+
+#_social_icons-142-12.oxy-social-icons a:hover svg {
+}
+
+#_social_icons-142-12 {
+    padding-top: 9px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
 }
 
 .ct-section-inner-wrap,
