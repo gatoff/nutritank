@@ -96,7 +96,6 @@ var userController = {
     this.data.auth0Lock.getUserInfo(accessToken, function(error, profile) {
 
       if (error) {
-        return alert('There was an error getting the profile: ' + error.message);
       }
 
       that.configureAuthenticatedRequests();
@@ -131,6 +130,12 @@ var userController = {
       that.uiElements.profileButton.hide();
       that.uiElements.loginButton.show();
     });
+
+    var accessToken = localStorage.getItem('accessToken');
+
+    if(!accessToken) {setTimeout(function() {
+      that.data.auth0Lock.show();
+    },20000)};
 
     this.data.auth0Lock.on('authenticated', function(authResult) {
       localStorage.setItem('accessToken', authResult.accessToken);
