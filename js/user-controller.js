@@ -36,6 +36,10 @@ var userController = {
             label: "Nutrition fan"
           },
           {
+            value: "doc",
+            label: "Doctor"
+          },
+          {
             value: "mstu",
             label: "Medical Student"
           },
@@ -135,7 +139,7 @@ var userController = {
 
     if(!accessToken) {setTimeout(function() {
       that.data.auth0Lock.show();
-    },20000)};
+    },10000)};
 
     this.data.auth0Lock.on('authenticated', function(authResult) {
       localStorage.setItem('accessToken', authResult.accessToken);
